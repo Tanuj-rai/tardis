@@ -27,6 +27,7 @@ from astropy import units as u
 
 import tardis
 from tardis import analysis, util
+from pathlib import Path
 
 
 class MatplotlibWidget(FigureCanvas):
@@ -1265,7 +1266,7 @@ class Tardis(QtWidgets.QMainWindow):
         QtWidgets.QMainWindow.__init__(self, parent)
 
         # path to icons folder
-        self.path = os.path.join(tardis.__path__[0], "gui", "images")
+        self.path = Path(__file__).resolve().parent / "images"
 
         # Check if configuration file was provided
         self.mode = "passive"
