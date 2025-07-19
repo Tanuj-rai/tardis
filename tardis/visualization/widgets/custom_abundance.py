@@ -34,7 +34,7 @@ from tardis.util.base import (
 )
 from tardis.visualization.widgets.util import debounce
 
-BASE_DIR = tardis.__path__[0]
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 YAML_DELIMITER = "---"
 
 
