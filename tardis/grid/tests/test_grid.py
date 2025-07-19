@@ -6,7 +6,7 @@ import pandas as pd
 import tardis
 import tardis.grid as grid
 
-DATA_PATH = Path(tardis.__path__[0]) / "grid" / "tests" / "data"
+DATA_PATH = Path(__file__).resolve().parent / "data"
 
 
 def test_grid(atomic_dataset):
