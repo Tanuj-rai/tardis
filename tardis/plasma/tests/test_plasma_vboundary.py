@@ -7,7 +7,7 @@ import tardis
 from tardis.io.configuration.config_reader import Configuration
 from tardis.simulation import Simulation
 
-DATA_PATH = os.path.join(tardis.__path__[0], "plasma", "tests", "data")
+DATA_PATH = Path(__file__).resolve().parent / "data"
 
 
 @pytest.fixture
